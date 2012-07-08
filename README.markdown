@@ -20,3 +20,4 @@ This won't work for external sites however due to browser security restrictions.
 - some additional script for hiding frames
 - activate only 320x480, 480x320, 1024x768
 - livereload-js
+- load loader_large.gif from host
