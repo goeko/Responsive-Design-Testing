@@ -14,3 +14,9 @@ http://mattkersley.com/responsive?google.com
 
 Once you've uploaded, you can navigate your website from within the iframes, and the others will update.
 This won't work for external sites however due to browser security restrictions.
+
+## MyFork
+- setup sass project
+- some additional script for hiding frames
+- activate only 320x480, 480x320, 1024x768
+- livereload-js
