@@ -107,8 +107,19 @@ $(document).ready(function(){
     //load other pages with the same URL
     if(allLoaded()){
       if(error){
-        alert('Browsers prevent navigation from inside iframes across domains.\nPlease use the textbox at the top for external sites.');
+        
+		alert('Browsers prevent navigation from inside iframes across domains.\nPlease use the textbox at the top for external sites.');
         loadPage('', defaultURL);
+		
+		// parent_body = $this.parent().parent().parent().parent();
+		// 
+		// this_url = $this.contents().get(0).location.href;
+		// alert(this_url)
+		//parent_body.find('iframe')
+		// .css({
+		// 	'background':'#f00'
+		// })
+
       }else{
         loadPage($this, url);
       }

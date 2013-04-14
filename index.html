@@ -5,6 +5,9 @@
 	<meta name="description" content="Responsive design testing for the masses">
 	<title>Responsive Design Testing</title>
 	<link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script type="text/javascript" charset="utf-8">
+		// document.domain = "responsive.gfx";
+	</script>
 </head>
 <body id="container">
 	<div id="url">
@@ -47,6 +50,17 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 	<script src="javascripts/responsive.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		if (navigator.userAgent.indexOf("Firefox") != -1) {
+		    try {
+		        netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+		    } 
+		    catch (e) {
+		        alert("Permission UniversalBrowserRead denied -- not running Mozilla?");
+		    }
+		}
+	</script>
 
 	<script>document.write('<script src="http://'
 	    + (location.host || 'localhost').split(':')[0]

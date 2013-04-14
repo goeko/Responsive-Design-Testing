@@ -18,14 +18,24 @@ This won't work for external sites however due to browser security restrictions.
 ---
 or use
 ---
-$ open -a Google\ Chrome --args --disable-web-security
+
+	$ open -a Google\ Chrome --args --disable-web-security
+
 Also if you're trying to access local files for dev purposes like AJAX or JSON, you can use this flag too.
 
--–allow-file-access-from-files
+	-–allow-file-access-from-files
+
 For PC go into the command prompt and go into the folder where Chrome.exe is and type
 
-chrome.exe --disable-web-security
+	chrome.exe --disable-web-security
+
 That should disable the same origin policy and allow you to access local files.
+
+
+or safer way with disabled personal data
+
+	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://localhost:8080/ --no-default-browser-check --temp-profile --disable-web-security --disable-prompt-on-repost --disable-metrics --disable-metrics-reporting --no-first-run --disable-popup-blocking --user-data-dir="/tmp/some"
+
 ---
 
 ## MyFork

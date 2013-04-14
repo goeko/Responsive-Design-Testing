@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Responsive Design Testing",
+  "description": "This extension demonstrates a 'Responsive Design Testing",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "loader_large.gif",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "*://*/*"
+  ]
+}
