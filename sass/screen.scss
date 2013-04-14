@@ -5,68 +5,79 @@
 
 @import "compass/reset";
 
-
 * {
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 body {
-  padding: 11px;
+  padding: 20px;
   font-family: sans-serif;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
 h2 {
-  font-size: 175%;
   margin: 0 0 20px 0;
-  &.small {
-    font-size: 80%;
-    margin: 0 0 0 0;
-    clear: both; } }
+}
 
 span.small {
   font-size: 60%;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 #url {
   margin: 0 0 20px 0px;
   display: block;
   input {
     &[type=text] {
-      border: solid 1px #666666;
+      border: solid 1px #666;
       width: 85%;
       margin: 0 auto;
       font-size: 2em;
-      text-align: left; }
+      text-align: left;
+    }
     &[type=submit] {
-      display: none; } }
+      display: none;
+    }
+  }
   #options {
     float: right;
     line-height: 25px;
     width: 13%;
     input {
-      margin-top: 5px; } } }
+      margin-top: 5px;
+    }
+  }
+}
 
 #frames {
   overflow-x: scroll;
   width: 100%;
   margin-bottom: 10px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+}
 
 .frame {
-  margin-right: 11px;
+  margin-right: 20px;
   float: left;
   &:last-child {
-    margin-right: 0; }
+    margin-right: 0;
+  }
   img {
     display: none;
-    vertical-align: middle; } }
+    vertical-align: middle;
+  }
+}
 
 iframe {
-  border: solid 1px black; }
+  border: solid 1px #000;
+}
 
 .widthOnly {
   height: 580px;
   h2 span {
-    display: none; }
+    display: none;
+  }
   iframe {
-    height: 500px; } }
-
+    height: 500px;
+  }
+}
