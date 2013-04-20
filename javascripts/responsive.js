@@ -2,12 +2,12 @@ var defaultURL = 'eibe.relaunch.me'; //<---- CHANGE TO YOUR WEBSITE URL
 
 //show loading graphic
 function showLoader(id) {
-  $('#' + id + ' img').fadeIn('slow');
+  $('#' + id + ' .img').fadeIn('slow').css({'display':'inline-block'});
 }
 
 //hdie loading graphic
 function hideLoader(id) {
-  $('#' + id + ' img').fadeOut('slow');
+  $('#' + id + ' .img').fadeOut('slow');
 }
 
 //function to check load state of each frame
