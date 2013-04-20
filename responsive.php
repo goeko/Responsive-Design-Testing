@@ -4,11 +4,9 @@ $style = file_get_contents('stylesheets/screen.css');
 $script = file_get_contents('javascripts/responsive.js');
 
 // unused form in this form
-// $search = '/<form(.*)\/form>/i';
-// //$search[1] = '/<div id=\"copy.*\/div>/i';
-// $replace = '';
-// //$replace[1] = '';
-// $markup = preg_replace($search, $replace, $markup);
+$search = '/<div id="copy">(.*)?<\/div>/s';
+$replace = '';
+$markup = preg_replace($search, $replace, $markup);
 
 $style_search = '/<link(.*)\/>/';
 $style_replace = '<style type="text/css" media="screen">'.$style.'</style>';
@@ -18,6 +16,10 @@ $script_search = '/<script src=\"javascripts\/responsive.js\"><\/script>/';
 $script_replace = '<script type="text/javascript" charset="utf-8">'.$script.'</script>';
 $markup = preg_replace($script_search, $script_replace, $markup);
 
+$defaultURL_search = '/var defaultURL = \'(.*)\';/';
+//$defaultURL_replace = 'var defaultURL = \''.$_SERVER['HTTP_HOST'].'\';';
+$defaultURL_replace = 'var defaultURL = document.location.host;';
+$markup = preg_replace($defaultURL_search, $defaultURL_replace, $markup);
 
 $filename = 'responsive.html';
 if (is_writable($filename)) {
