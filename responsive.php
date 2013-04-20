@@ -11,13 +11,14 @@ $markup = preg_replace($search, $replace, $markup);
 $style_search = '/<link(.*)\/>/';
 $style_replace = '<style type="text/css" media="screen">'.$style.'</style>';
 $markup = preg_replace($style_search, $style_replace, $markup);
-	
+
+$script .= "$('#url input[type=text]').attr('placeholder', document.location.host);";
 $script_search = '/<script src=\"javascripts\/responsive.js\"><\/script>/';
 $script_replace = '<script type="text/javascript" charset="utf-8">'.$script.'</script>';
 $markup = preg_replace($script_search, $script_replace, $markup);
 
+
 $defaultURL_search = '/var defaultURL = \'(.*)\';/';
-//$defaultURL_replace = 'var defaultURL = \''.$_SERVER['HTTP_HOST'].'\';';
 $defaultURL_replace = 'var defaultURL = document.location.host;';
 $markup = preg_replace($defaultURL_search, $defaultURL_replace, $markup);
 
