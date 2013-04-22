@@ -1,4 +1,5 @@
 var defaultURL = 'eibe.relaunch.me'; //<---- CHANGE TO YOUR WEBSITE URL
+var defaultURL = '10.0.5.20'; //<---- CHANGE TO YOUR WEBSITE URL
 
 //show loading graphic
 function showLoader(id) {
