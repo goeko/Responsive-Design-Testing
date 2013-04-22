@@ -81,3 +81,11 @@ iframe {
     height: 500px;
   }
 }
+
+.img {
+	float:right;
+	display:inline-block;
+	background: transparent inline-image('loader_large.gif') no-repeat 0 0;
+	width: 24px;
+	height: 24px;
+}
