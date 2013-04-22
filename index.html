@@ -49,6 +49,15 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 	<script src="javascripts/responsive.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function () {
+			$('.frame h2').each(function(e,i) {
+				$(this).bind('click', function () {
+					$(this).next('iframe').toggle();
+				})
+			})
+		})
+	</script>
 
 </body>
 </html>

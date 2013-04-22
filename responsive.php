@@ -2,6 +2,7 @@
 $markup = file_get_contents('index.html');
 $style = file_get_contents('stylesheets/screen.css');
 $script = file_get_contents('javascripts/responsive.js');
+// $script_jquery = file_get_contents('javascripts/jquery_1.6.min.js');
 
 // unused form in this form
 $search = '/<div id="copy">(.*)?<\/div>/s';
@@ -11,6 +12,12 @@ $markup = preg_replace($search, $replace, $markup);
 $style_search = '/<link(.*)\/>/';
 $style_replace = '<style type="text/css" media="screen">'.$style.'</style>';
 $markup = preg_replace($style_search, $style_replace, $markup);
+
+/*
+$script_jquery_search = '/<script src=\"javascripts\/jquery_1.6.min.js\"><\/script>/';
+$script_jquery_replace = '<script type="text/javascript" charset="utf-8">'.$script_jquery.'</script>';
+$markup = preg_replace($script_jquery_search, $script_jquery_replace, $markup);
+*/
 
 $script .= "$('#url input[type=text]').attr('placeholder', document.location.host);";
 $script_search = '/<script src=\"javascripts\/responsive.js\"><\/script>/';
